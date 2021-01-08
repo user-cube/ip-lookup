@@ -9,6 +9,17 @@ class IPLookup:
         self.database = os.getenv("DATABASE_PATH")
 
     def _find_ip_info(self, ip_address: str) -> list:
+        """
+        Open MaxMind database files and returns
+        information according to the given ip
+        address.
+        Args:
+            ip_address: ip address to search.
+
+        Returns:
+            list with all information about
+            the given ip address.
+        """
         try:
             with geoip2.database.Reader(self.database + 'GeoLite2-City.mmdb') as reader:
                 response = reader.city(ip_address=ip_address)
@@ -32,6 +43,11 @@ class IPLookup:
             return []
 
     def main(self) -> None:
+        """
+        Init ip lookup.
+        Returns:
+            None, only prints ip information.
+        """
         headers = ["Code", "Country", "SS", "SC", "City", "Postal Code", "Latitude", "Longitude", "AN", "ASN"]
         if LIST_OF_IPS != "":
             ips = LIST_OF_IPS.split(" ")
