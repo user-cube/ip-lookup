@@ -46,3 +46,10 @@ $ python main.py --ips "8.8.8.8"
 ```shell
 $ python main.py --ips "8.8.8.8 8.8.4.4"
 ```
+
+## Global install
+```shell
+$ pip3 install -r requirements.txt
+$ export DATABASE_PATH=/path/to/databases >> ~/.bashrc # ~/.zshrc if using zsh
+$ alias ip-lookup="python3 /path/to/main.py" >> ~/.bashrc # ~/.zshrc if using zsh
+```
