@@ -47,7 +47,7 @@ $ python main.py --ips "8.8.8.8"
 $ python main.py --ips "8.8.8.8 8.8.4.4"
 ```
 
-## Global install
+## Global install (Unix)
 ```shell
 $ pip3 install -r requirements.txt
 $ export DATABASE_PATH=/path/to/databases >> ~/.bashrc # ~/.zshrc if using zsh
