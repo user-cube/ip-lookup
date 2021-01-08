@@ -26,12 +26,12 @@ After the download is complete you need to set your database path.
 
 ### Unix
 ```shell
-$ export DATABASE_PATH=/path/to/variable
+$ export DATABASE_PATH=/path/to/database
 ```
 
 ### Windows (cmd)
 ```shell
-set DATABASE_PATH=/path/to/variable
+set DATABASE_PATH=/path/to/database
 ```
 
 ## Execute IP Lookup Tool
