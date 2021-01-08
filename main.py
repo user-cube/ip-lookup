@@ -33,10 +33,6 @@ class IPLookup:
 
     def main(self) -> None:
         headers = ["Code", "Country", "SS", "SC", "City", "Postal Code", "Latitude", "Longitude", "AN", "ASN"]
-        if IP_ADDRESS != "":
-            table = self._find_ip_info(ip_address=IP_ADDRESS)
-            if table:
-                print(tabulate([table], headers, tablefmt="grid"))
         if LIST_OF_IPS != "":
             ips = LIST_OF_IPS.split(" ")
             if len(ips) > 0:
@@ -51,9 +47,7 @@ class IPLookup:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
-    parser.add_argument("--ip", help="Find single IP Address Information", default="")
-    parser.add_argument("--list", help="Search information about a list of IP Addresses", default="")
+    parser.add_argument("--ips", help="Search information about a list of IP Addresses", default="")
     args = parser.parse_args()
-    IP_ADDRESS = args.ip
-    LIST_OF_IPS = args.list
+    LIST_OF_IPS = args.ips
     IPLookup().main()
