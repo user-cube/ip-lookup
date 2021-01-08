@@ -39,10 +39,10 @@ You can search for only one IP or a list of IPs.
 
 ### Single Search
 ```shell
-$ python main.py --ip "8.8.8.8"
+$ python main.py --ips "8.8.8.8"
 ```
 
 ### List Search
 ```shell
-$ python main.py --list "8.8.8.8 8.8.4.4"
+$ python main.py --ips "8.8.8.8 8.8.4.4"
 ```
